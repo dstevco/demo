@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 Tekst vo prviot fajl vo master
-=======
 Dodaden text
->>>>>>> test
