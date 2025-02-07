@@ -2,3 +2,4 @@ Tekst vo prviot fajl vo master
 Dodaden text
 Nov red vo t.txt
 Promena od demo2
+Promena od demo proektot od nova brancha
