@@ -1,2 +1,3 @@
 Tekst vo prviot fajl vo master
 Dodaden text
+Nov red vo t.txt
