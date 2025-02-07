@@ -1,1 +1,2 @@
 Vtor fajl
+Vtor red vo vtor fajl
