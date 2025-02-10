@@ -1,0 +1,253 @@
+    1  git version
+    5  git config --global --list
+    6  mkdir demo
+    7  cd demo
+    8  ls
+    9  git init
+   10  git config --global --list
+   11  git config --global user.name "Stevco"
+   12  git config --global user.email "stevco@gmail.com"
+   13  git config --global --list
+   14  git config --global help.autcorrect "20"
+   15  git config --global --list
+   16  git config --global credentila.helper "cache"
+   17  git config --global alias.s "status"
+   18  git config --global --list
+   19  git config --list
+   21  git config --system --list
+   25  git checkout -b test
+   26  git checkout master
+   27  git checkout master
+   28  git branch -a
+   29  git checkout
+   30  touch t.txt
+   32  git status
+   33  git add .
+   34  git commit -m "Test fajl"
+   35  git status
+   36  git checkout master
+   37  git status
+   38  git branch -a
+   39  git checkout -b master
+   41  git status
+   42  git branch -a
+   43  git checkout test
+   44  git branch -a
+   45  git checkout master
+   46  git branch -a
+   47  git checkout test
+   48  nano t.txt
+   49  git status
+   50  git add t.txt
+   51  git status
+   52  touch r.txt
+   53  nano r.txt
+   54  ls
+   55  git status
+   56  git log
+   57  git diff
+   58  git diff
+   59  git diff head
+   60  git diff --staged
+   61  ls
+   62  git status
+   63  git add .
+   64  git status
+   65  git diff --staged
+   66  git diff --head
+   67  git diff head
+   68  git status
+   69  nano r.txt
+   70  git status
+   71  git diff
+   72  git diff head
+   73  git status
+   74  git commit -m "Vtor comit"
+   75  git status
+   76  git add .
+   77  git status
+   78  git commit -m "Tret comit"
+   79  git status
+   80  git checkout master
+   81  ls
+   82  git status
+   83  nano t.txt
+   84  git status
+   85  git add .
+   86  git commit -m "Prv comit vo master"
+   87  git status
+   88  git merge test -m "Merge of test na master"
+   89  git status
+   90  git add t.txt
+   91  git status
+   92  git commit
+   93  git status
+   94  git chekout test
+   95  nano t.txt
+   96  nano t.txt
+   97  git status
+   98  git add .
+   99  git commit -m "Resen conflikt"
+  100  git status
+  101  nano t.txt
+  102  nano r.txt
+  103  git checkout test
+  104  nano r.txt
+  105  nano t.txt
+  106  git status
+  107  git merge master -m "Zemeno od master"
+  108  git status
+  109  nano t.txt
+  110  nano r.txt
+  111  git checkout master
+  112  git log
+  113  git log --oneline
+  114  git log --oneline --graph
+  115  git branch -d test
+  116  git log --oneline --graph
+  117  git branch -a
+  118  git branch test
+  119  git branch -a
+  120  git branch -d test
+  121  git branch -a
+  122  cd ..
+  123  mkdir demo2
+  124  cd demo2
+  125  cd ..
+  126  cd demo
+  127  git remote add origin https://github.com/dstevco/demo.git
+  128  git branch -M main
+  129  git push -u origin main
+  130  git branch -a
+  131  git remote
+  132  git remote -v
+  133  cd ..
+  134  cd demo2/
+  135  git clone https://github.com/dstevco/demo.git
+  136  ls
+  137  cd ..
+  138  rm -rf ~/demo2
+  139  mkdir demo2
+  140  cd demo2
+  141  ls
+  142  git clone https://github.com/dstevco/demo.git
+  143  ls
+  144  cd demo/
+  145  ls
+  146  git remote -v
+  147  git status
+  148  git add .
+  149  git commit -m "Nov red vo r.txt"
+  150  git status
+  151  git push
+  152  git status
+  153  cd ..
+  154  cd ..
+  155  cd demo
+  156  git status
+  157  git pull
+  158  git fetch
+  159  git status
+  160  git fetch
+  161  git status
+  162  git diff -v
+  163  git diff -a
+  164  git diff main origin/main
+  165  git pull
+  166  git status
+  167  git fetch
+  168  git status
+  169  cd ..
+  170  cd demo2
+  171  cd demo/
+  172  ls
+  173  nano t.txt
+  174  git fetch
+  175  git status
+  176  git pull
+  177  git status
+  178  nano t.txt
+  179  git status
+  180  git add .
+  181  git commit -m "Promena od demo2"
+  182  git status
+  183  git push
+  184  git status
+  185  cd ..
+  186  cd ..
+  187  cd demo
+  188  ls
+  189  nano t.txt
+  190  git checkout -b Promena
+  191  nano t.txt
+  192  git status
+  193  git add .
+  194  git commit -m "Promeni od demo za konflikt"
+  195  git status
+  196  git chedkout main
+  197  git pull
+  198  git status
+  199  nano t.txt
+  200  git checkout main
+  201  nano t.txt
+  202  git pull
+  203  nano t.txt
+  204  git merge Promena
+  205  git status
+  206  git status
+  207  git add .
+  208  git status
+  209  git commit -m "Fix conflict"
+  210  git status
+  211  git log --oneline
+  212  git push
+  213  git log --oneline
+  214  cd ..
+  215  mkdir demo3
+  216  cd demo3
+  217  git init
+  218  git branch -M main
+  219  for d in {1..6}; do touch "file${d}.mk"; git add "file${d}.mk"; git commit -m "adding file ${d}"; done
+  220  ls
+  221  git log --online
+  222  git log --oneline
+  223  git status
+  224  touch file7.md
+  225  git add .
+  226  git commit -m "Adding file 8"
+  227  git status
+  228  git log --oneline
+  229  git commit --amend
+  230  git log --oneline
+  231  git reset --soft HEAD~2
+  232  git status
+  233  git commit -m "Adding files 6 and 7"
+  234  git log -oneline
+  235  git log --oneline
+  236  git reset HEAD~1
+  237  git status
+  238  git add file6.mk
+  239  git commit -m "Adding file 6"
+  240  git add file7.mk
+  241  git commit -m "Adding file 7"
+  242  git status
+  243  git add file7.md
+  244  git status
+  245  git commit -m "Adding file 7"
+  246  git status
+  247  git log --oneline
+  248  git reset --hard d81e7e1
+  249  git log --oneline
+  250  git status
+  251  ls
+  252  git reflog
+  253  git cherry-pick 0e120fa
+  254  git log --oneline
+  255  ls
+  256  git cherry-pick d1e257b
+  257  git log --oneline
+  258  git reflog
+  259  ls
+  260  git cherry-pick e70de14
+  261  ls
+  262  git log --oneline
