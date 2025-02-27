@@ -1,433 +1,500 @@
-    1  git version
-    2  type git
-    3  pwd
-    4  ls
-    5  git config --global --list
-    6  mkdir demo
-    7  cd demo
-    8  ls
-    9  git init 
-   10  git config --global --list
-   11  git config --global user.name "Stevco"
-   12  git config --global user.email "stevco@gmail.com"
-   13  git config --global --list
-   14  git config --global help.autcorrect "20"
-   15  git config --global --list
-   16  git config --global credentila.helper "cache"
-   17  git config --global alias.s "status"
-   18  git config --global --list
-   19  git config --list
-   20  code .
-   21  git config --system --list
-   22  cd demo/
-   23  ls
-   24  ls -a
-   25  git checkout -b test
-   26  git checkout master
-   27  git checkout master
-   28  git branch -a
-   29  git checkout
-   30  touch t.txt
-   31  ls
-   32  git status
-   33  git add .
-   34  git commit -m "Test fajl"
-   35  git status
-   36  git checkout master
-   37  git status
-   38  git branch -a
-   39  git checkout -b master
-   40  ls
-   41  git status
-   42  git branch -a
-   43  git checkout test
-   44  git branch -a
-   45  git checkout master
-   46  git branch -a
-   47  git checkout test
-   48  nano t.txt 
-   49  git status
-   50  git add t.txt 
-   51  git status
-   52  touch r.txt
-   53  nano r.txt 
-   54  ls
-   55  git status
-   56  git log
-   57  git diff 
-   58  git diff
-   59  git diff head
-   60  git diff --staged
-   61  ls
-   62  git status
-   63  git add .
-   64  git status
-   65  git diff --staged
-   66  git diff --head
-   67  git diff head
-   68  git status
-   69  nano r.txt 
-   70  git status
-   71  git diff 
-   72  git diff head
-   73  git status
-   74  git commit -m "Vtor comit"
-   75  git status
-   76  git add .
-   77  git status
-   78  git commit -m "Tret comit"
-   79  git status
-   80  git checkout master
-   81  ls
-   82  git status 
-   83  nano t.txt 
-   84  git status 
-   85  git add .
-   86  git commit -m "Prv comit vo master"
-   87  git status
-   88  git merge test -m "Merge of test na master"
-   89  git status
-   90  git add t.txt 
-   91  git status
-   92  git commit
-   93  git status
-   94  git chekout test
-   95  nano t.txt 
-   96  nano t.txt 
-   97  git status
-   98  git add .
-   99  git commit -m "Resen conflikt"
-  100  git status
-  101  nano t.txt 
-  102  nano r.txt 
-  103  git checkout test
-  104  nano r.txt 
-  105  nano t.txt 
-  106  git status
-  107  git merge master -m "Zemeno od master"
-  108  git status
-  109  nano t.txt 
-  110  nano r.txt 
-  111  git checkout master 
-  112  git log
-  113  git log --oneline
-  114  git log --oneline --graph
-  115  git branch -d test
-  116  git log --oneline --graph
-  117  git branch -a
-  118  git branch test
-  119  git branch -a
-  120  git branch -d test
-  121  git branch -a
-  122  cd ..
-  123  mkdir demo2
-  124  cd demo2
-  125  cd ..
-  126  cd demo
-  127  git remote add origin https://github.com/dstevco/demo.git
-  128  git branch -M main
-  129  git push -u origin main
-  130  git branch -a
-  131  git remote
-  132  git remote -v
-  133  cd ..
-  134  cd demo2/
-  135  git clone https://github.com/dstevco/demo.git
-  136  ls
-  137  cd ..
-  138  rm -rf ~/demo2
-  139  mkdir demo2
-  140  cd demo2
-  141  ls
-  142  git clone https://github.com/dstevco/demo.git
-  143  ls
-  144  cd demo/
-  145  ls
-  146  git remote -v
-  147  git status
-  148  git add .
-  149  git commit -m "Nov red vo r.txt"
-  150  git status
-  151  git push
-  152  git status
-  153  cd ..
-  154  cd ..
-  155  cd demo
-  156  git status
-  157  git pull
-  158  git fetch
-  159  git status
-  160  git fetch
-  161  git status
-  162  git diff -v
-  163  git diff -a
-  164  git diff main origin/main
-  165  git pull
-  166  git status
-  167  git fetch
-  168  git status
-  169  cd ..
-  170  cd demo2
-  171  cd demo/
-  172  ls
-  173  nano t.txt 
-  174  git fetch
-  175  git status
-  176  git pull
-  177  git status
-  178  nano t.txt 
-  179  git status
-  180  git add .
-  181  git commit -m "Promena od demo2"
-  182  git status
-  183  git push
-  184  git status
-  185  cd ..
-  186  cd ..
-  187  cd demo
-  188  ls
-  189  nano t.txt 
-  190  git checkout -b Promena
-  191  nano t.txt 
-  192  git status
-  193  git add .
-  194  git commit -m "Promeni od demo za konflikt"
-  195  git status
-  196  git chedkout main
-  197  git pull
-  198  git status
-  199  nano t.txt 
-  200  git checkout main
-  201  nano t.txt 
-  202  git pull
-  203  nano t.txt 
-  204  git merge Promena 
-  205  git status
-  206  git status
-  207  git add .
-  208  git status
-  209  git commit -m "Fix conflict"
-  210  git status
-  211  git log --oneline
-  212  git push
-  213  git log --oneline
-  214  cd ..
-  215  mkdir demo3
-  216  cd demo3
-  217  git init
-  218  git branch -M main
-  219  for d in {1..6}; do touch "file${d}.mk"; git add "file${d}.mk"; git commit -m "adding file ${d}"; done
-  220  ls
-  221  git log --online
-  222  git log --oneline
-  223  git status
-  224  touch file7.md
-  225  git add .
-  226  git commit -m "Adding file 8"
-  227  git status
-  228  git log --oneline
-  229  git commit --amend
-  230  git log --oneline
-  231  git reset --soft HEAD~2
-  232  git status
-  233  git commit -m "Adding files 6 and 7"
-  234  git log -oneline
-  235  git log --oneline
-  236  git reset HEAD~1
-  237  git status
-  238  git add file6.mk
-  239  git commit -m "Adding file 6"
-  240  git add file7.mk
-  241  git commit -m "Adding file 7"
-  242  git status
-  243  git add file7.md
-  244  git status
-  245  git commit -m "Adding file 7"
-  246  git status
-  247  git log --oneline
-  248  git reset --hard d81e7e1
-  249  git log --oneline
-  250  git status
-  251  ls
-  252  git reflog
-  253  git cherry-pick 0e120fa
-  254  git log --oneline
-  255  ls
-  256  git cherry-pick d1e257b
-  257  git log --oneline
-  258  git reflog
-  259  ls
-  260  git cherry-pick e70de14
-  261  ls
-  262  git log --oneline
-  263  history
-  264  history | grep rebase
-  265  git version
-  266  man git
-  267  git help
-  268  echo "Apple Pie" | git hash-object --stdin
-  269  echo "Apple Pie1" | git hash-object --stdin
-  270  echo "Apple Pie 1" | git hash-object --stdin
-  271  echo "Apple Pie" | git hash-object --stdin -w
-  272  ls
-  273  ls -a
-  274  open .git/
-  275  cd .git/
-  276  ls
-  277  cd objects/
-  278  ls
-  279  cd 23
-  280  ls
-  281  ls -altr
-  282  cat 991897e13e47ed0adb91a0082c31c82fe0cbe5
-  283  git -cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -t
-  284  git -cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5
-  285  git -cat-file 991897e13e47ed0adb91a0082c31c82fe0cbe5
-  286  git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -t
-  287  git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -p
-  288  tree
-  289  git count-objects
-  290  git branch
-  291  open .git
-  292  ls .git/
-  293  ls
-  294  ls -altr
-  295  git branch 
-  296  cd ../..
-  297  ls
-  298  ls -altr
-  299  ls refs/heads/
-  300  ls refs/heads/main 
-  301  cat refs/heads/main
-  302  git status
-  303  cd ..
-  304  git status
-  305  ls
-  306  git chekout -b b1
-  307  git branch
-  308  git checkout -b b1
-  309  ls
-  310  touch file8.mk
-  311  ls
-  312  git status
-  313  git add .
-  314  git status
-  315  git commit -m "Add file 8"
-  316  ls
-  317  git switch main 
-  318  git rebase b1
-  319  git branch 
-  320  ls
-  321  git log --oneline
-  322  git tag Oznaka1 -a -m "Opis kaj tag"
-  323  git tag
-  324  git log --oneline
-  325  git branch -d b1 
+  324  git checkout -b t2
+  325  touch t1.txt
   326  ls
-  327  git branch 
-  328  cd ..
-  329  cd demo
-  330  ls
-  331  git branch 
-  332  cd ..
-  333  cd demo2/
-  334  ls
-  335  cd demo/
-  336  git branch 
-  337  ls
-  338  cd ..
-  339  cd ..
-  340  cd demo
-  341  ls
-  342  git branch -a
-  343  git branch -a
-  344  git status
-  345  git fetch 
-  346  git status
-  347  git add .
-  348  git commit -m "Add histry commands"
-  349  git status
-  350  git push 
-  351  git status
-  352  nano .git/config 
-  353  git branch --all
-  354  git tree
-  355  git show-ref
-  356  git cherry-pick --strategy=recursive -X theirs 
-  357  ls
-  358  git version
-  359  git branch
-  360  git branch -a
-  361  cd ../demo2/
-  362  ls
-  363  git clone https://github.com/dstevco/widgit.git
-  364  ls
-  365  cd widgit/
-  366  ls
-  367  git status
-  368  git remote -v
-  369  git branch -a
-  370  git fetch 
-  371  git pull
-  372  git push
-  373  git status
-  374  git remote update 
-  375  git log --oneline
-  376  ls
-  377  git status
-  378  git pull
-  379  nano config.txt 
-  380  git status
-  381  git add .
-  382  git status
-  383  git push
-  384  git status
-  385  git commit -m "Test2"
-  386  git status
-  387  git push 
-  388  nano config.txt 
-  389  git status
-  390  git commit -am "Test3"
-  391  git status
-  392  git push
-  393  git pull
-  394  git status
-  395  git log --oneline
-  396  git log --oneline -n 5
-  397  git push
-  398  git status
-  399  git branch -a
-  400  git checkout -b b2
-  401  git branch -a
-  402  nano config.txt 
-  403  git ls-remote
-  404  git push -u origin b2
-  405  git ls-remote
-  406  cd ..
-  407  mkdir w2
-  408  cd w2
-  409  git clone https://github.com/dstevco/widgit.git
-  410  git status
-  411  ls
-  412  cd widgit/
-  413  git status
-  414  git branch 
-  415  git branch -a
-  416  git remote -v
-  417  git ls-remote
-  418  git fetch origin b2
-  419  git branch
-  420  git branch -a
-  421  git checkout --track origin/b2 
-  422  git branch -a
-  423  ls
-  424  git status
-  425  git pull
-  426  pwd
-  427  cd ../..
-  428  ls
-  429  cd ..
-  430  cd demo
-  431  ls
-  432  history > GIT Commands History.txt
-  433  history > "GIT Commands History.txt"
+  327  nano t1.txt 
+  328  git commit -am "File t1"
+  329  git add .
+  330  git commit -am "File t1"
+  331  touch t2.txt
+  332  nano t2.txt 
+  333  git add .
+  334  git commit -m "Second file t2"
+  335  git status
+  336  git log --oneline 
+  337  git switch main
+  338  git branch 
+  339  git switch master 
+  340  git branch -m main
+  341  mkdir ../d3
+  342  cp . -r ../d3/
+  343  ls ../d3
+  344  cd ../d3
+  345  ls
+  346  ls -altr
+  347  git branch 
+  348  git switch t2
+  349  ls
+  350  cd ../d2
+  351  ls
+  352  git switch t2
+  353  git switch main
+  354  ls
+  355  git switch t2
+  356  git rebase main
+  357  git switch main
+  358  touch.exe main3.txt
+  359  nano main3.txt 
+  360  git add .
+  361  git commit -m "New file in main"
+  362  git status
+  363  ls
+  364  git switch t2
+  365  ls
+  366  git rebase main
+  367  git log --oneline 
+  368  ls
+  369  cd ../d3
+  370  ls
+  371  git switch main 
+  372  ls
+  373  touch.exe main3.txt
+  374  nano main3.txt 
+  375  git add .
+  376  git commit -m "New file in main"
+  377  git status 
+  378  git switch t2 
+  379  ls
+  380  git status 
+  381  ls
+  382  git log  --oneline 
+  383  git merge main
+  384  ls
+  385  git log --oneline 
+  386  cd ../
+  387  ls
+  388  cd widgit/
+  389  ls
+  390  git status 
+  391  git fetch 
+  392  git status 
+  393  git branch 
+  394  git checkout -b f4
+  395  ls
+  396  ls
+  397  mkdir f4
+  398  cd f4
+  399  touch f4.txt
+  400  nano.exe f4.txt 
+  401  git add .
+  402  git commit -m "Start f4"
+  403  git push -u origin f4
+  404  touch f1.txt
+  405  nano f1.txt 
+  406  git add .
+  407  git commit -m "New file f1"
+  408  touch f2.txt
+  409  nano f2.txt 
+  410  git add .
+  411  git commit -m "New f2 file"
+  412  git status
+  413  nano f4.txt 
+  414  ls
+  415  git remote 
+  416  git remote -a
+  417  git remote -v
+  418  git fetch 
+  419  git status
+  420  ls
+  421  git branch 
+  422  ls
+  423  cd ..
+  424  ls
+  425  git status
+  426  git fetch 
+  427  git status
+  428  git branch -a
+  429  git push -u origin f4
+  430  ls
+  431  cd f4
+  432  ls
+  433  ls -altr
+  434  cd ..
+  435  git status
+  436  git log --oneline 
+  437  cd f4
+  438  git log --oneline 
+  439  git switch main
+  440  git pull
+  441  git switch f4
+  442  git pull
+  443  cd ..
+  444  ls
+  445  git switch main
+  446  cd ..
+  447  ls
+  448  mkdir cp
+  449  cd cp
+  450  ls
+  451  pwd
+  452  git init
+  453  touch main.txt
+  454  nano main.txt 
+  455  git add .
+  456  git commit -m "First file main is created"
+  457  git branch -b x
+  458  git branch add x
+  459  git branch -add x
+  460  git branch --add x
+  461  git branch -c x
+  462  git branch 
+  463  git switch x
+  464  ls
+  465  git cherry-pick 862c4e7
+  466  git log --oneline 
+  467  ls
+  468  git cherry-pick 5064950
+  469  ls
+  470  git log --oneline 
+  471  git log x --oneline 
+  472  git log y --oneline 
+  473  cd ..
+  474  cd ..
+  475  cd demo
+  476  ls
+  477  ls
+  478  cd ..
+  479  ls
+  480  mkdir demo4
+  481  cd demo4
+  482  ls
+  483  cd ..
+  484  curl
+  485  curl -#0 https://raw.gitgubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+  486  curl -#0 https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+  487  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+  488  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > git-completion.bash
+  489  ls
+  490  ls -altr
+  491  chmod 775 git-completion.bash
+  492  ls -altr
+  493  chmod +x git-completion.bash 
+  494  ls -altr
+  495  cd
+  496  ls
+  497  ls -altr
+  498  echo "source git-completion.bash" >> .bash_profile
+  499  ls -altr
+  500  exit
+  501  pwd
+  502  cd demo
+  503  ls
+  504  cd ..
+  505  cd demo2
+  506  ls
+  507  cd widgit/
+  508  ls
+  509  cd .git
+  510  ls
+  511  ls -altr
+  512  cd hooks/
+  513  ls
+  514  more commit-msg.sample
+  515  nano commit-msg.sample
+  516  nano prepare-commit-msg.sample 
+  517  cd ..
+  518  ls
+  519  cd ..
+  520  ls
+  521  git cat-file -p HEAD
+  522  git git log --oneline
+  523  git log --oneline
+  524  git branch 
+  525  git lg
+  526  git branch 
+  527  git log --oneline b2..main
+  528  git log --oneline main..b2
+  529  git log --oneline main..f4
+  530  git log --oneline f4..main
+  531  git log --oneline b2..main
+  532  git log --oneline b2..main
+  533  git log --oneline b2...main
+  534  git lg
+  535  git tag
+  536  cd ..
+  537  ls
+  538  cd ..
+  539  cd demo
+  540  git tag
+  541  git lg
+  542  git tag -a
+  543  git tag -l
+  544  git tag -a -m "Oznaka" 043b01b
+  545  git tag -l
+  546  git lg
+  547  git tag -a Oznaka 043b01b -m "Oznaka za proba"
+  548  git tag -l
+  549  git tag -d 043b01b
+  550  git tag -l
+  551  git lg
+  552  git branch 
+  553  git tag -l
+  554  git tag -d Oznaka
+  555  git tag -l
+  556  git tag -a Oznaka 043b01b -m "Oznaka za proba"
+  557  git tag -l
+  558  git lg
+  559  git branch 
+  560  git log --oneline --ancestry-path main..Promena 
+  561  git log --oneline --graph  main Promena 
+  562  git show-branch 
+  563  git show-branch Promena
+  564  cd ..
+  565  cd demo2
+  566  cd widgit/
+  567  git show-branch 
+  568  git show-branch f4
+  569  git show-branch b2
+  570  cd ..
+  571  ls
+  572  cd demo/
+  573  git show-branch 
+  574  cd ..
+  575  cd ..
+  576  cd demo3
+  577  git show-branch 
+  578  cd ..
+  579  cd demo2
+  580  cd widgit/
+  581  git show-branch 
+  582  cd ..
+  583  cd demo/
+  584  git show-branch 
+  585  cd ..
+  586  cd ..
+  587  cd demo
+  588  git show-branch 
+  589  cd ..
+  590  cd demo3
+  591  ls
+  592  git show-branch 
+  593  cd ..
+  594  cd demo4
+  595  git show-branch 
+  596  git branch --merged 
+  597  git branch --no-merged 
+  598  cd ..
+  599  cd demo
+  600  git branch --no-merged 
+  601  git branch --merged 
+  602  git checkout -b Test
+  603  git branch --merged 
+  604  git branch --no-merged 
+  605  ls
+  606  nano t.txt 
+  607  git branch --no-merged 
+  608  git st
+  609  git add .
+  610  git branch --no-merged 
+  611  git commit -m "Nova promena"
+  612  git branch --no-merged 
+  613  git switch main 
+  614  git branch --no-merged 
+  615  git branch --merged 
+  616  git log --oneline main..Test
+  617  git show-branch --topic main Test
+  618  git show-branch --topic main Test Promena
+  619  git log --oneline --merges Promena..main
+  620  git log --oneline --merges --ancestry-path  Promena..main
+  621  git log --oneline main^..main
+  622  git log --oneline
+  623  git gc
+  624  git gui
+  625  git lg
+  626  git config --global alias.fm '!f() { git log --oneline --merges --ancestry-paty --topo-order --reverse $1..main | head -1; }; f'
+  627  git config --global alias.fm
+  628  git fm
+  629  git config --global alias.fm '!f() { git log --oneline --merges --ancestry-path --topo-order --reverse $1..main | head -1; }; f'
+  630  git fm
+  631  git branch 
+  632  git switch Test 
+  633  git fm
+  634  git lg
+  635  git fm eaccd00
+  636  git fm 3247e82
+  637  git lg
+  638  git lg --cherry-mark 
+  639  git lg --cherry-mark 
+  640  git lg
+  641  git lg --cherry-mark --left-right 
+  642  git lg --cherry-mark --left-right main...Test
+  643  git lg --cherry-mark --left-right Test...main
+  644  git lg --cherry main...Test
+  645  git lg --cherry Test...main
+  646  git lg  Test...main
+  647  git lg  main...Test
+  648  git lg  Test...main
+  649  git lg  main..Test
+  650  git lg  Test..main
+  651  git lg --follow
+  652  ls
+  653  git lg --follow t.txt
+  654  git lg --follow --patch t.txt
+  655  git lg -S 'red'
+  656  git lg -S 'red' --patch
+  657  git lg -S 'red' --patch --follow t.txt
+  658  git lg -S 'red' --patch --follow t.txt
+  659  git lg -S 'red' --patch  t.txt
+  660  git lg -S '.*red.*' --pickaxe-regex  --patch  t.txt
+  661  git lg -S '.*prviot.*' --pickaxe-regex  --patch  t.txt
+  662  git lg -S '.*prv.*' --pickaxe-regex  --patch  t.txt
+  663  git lg
+  664  git lg -S '.*conf.*' --pickaxe-regex  --patch  t.txt
+  665  git lg -S '.*prv.*' --pickaxe-regex  --patch  t.txt
+  666  git lg -S '.*master.*' --pickaxe-regex  --patch  t.txt
+  667  cat t.txt 
+  668  git lg -S '.*demo.*' --pickaxe-regex  --patch  t.txt
+  669  git lg -G '.*demo.*' --pickaxe-regex  --patch  t.txt
+  670  git lg -G 'demo'  --patch  t.txt
+  671  git lg -G '.*demo.*' --pickaxe-regex  --patch  t.txt
+  672  git lg -G '.*demo.*'  --patch  t.txt
+  673  git swith main
+  674  git switch main
+  675  git lg -L:demo:t.txt 
+  676  cat t.txt 
+  677  git lg -L:demo2:t.txt 
+  678  git lg -L:dem:t.txt 
+  679  ls -altr
+  680  ls .git/
+  681  ls -altr .git/
+  682  cd ..
+  683  cd demo2
+  684  cd widgit/
+  685  ls -altr
+  686  git lg -L:Usage:README.md 
+  687  cat README.md 
+  688  git lg -L:Starting:README.md 
+  689  git lg
+  690  git lg --author="Stevco"
+  691  git lg --author="Craig Golightly)"
+  692  git lg --author="Craig Golightly"
+  693  git lg --author="seethatgo"
+  694  git lg --author="Stevco"
+  695  git show HEAD --pretty=fuller
+  696  git lg --committer="Stevco"
+  697  git lg --committer="Stevco" --since="1 week"
+  698  git lg --committer="Stevco" --since="3 week"
+  699  git lg --committer="Stevco" --since="2 week"
+  700  git lg --committer="Stevco" --since="10 days"
+  701  git lg --committer="Stevco" --since="20 days"
+  702  git lg --committer="Stevco" --since="15 days"
+  703  git lg --committer="Stevco" --since="12 days"
+  704  git lg --committer="Stevco" --since="11 days"
+  705  git lg --committer="Stevco" --since="12 days"
+  706  ls
+  707  cat test.log 
+  708  cat config.txt 
+  709  git blame config.txt
+  710  git branch 
+  711  git blame config.txt main..b2
+  712  git blame main..b2 config.txt
+  713  git blame main..f4 config.txt
+  714  git blame main...f4 config.txt
+  715  git blame main...b2 config.txt
+  716  git blame -L3,5 config.txt
+  717  git shortlog -s -n | head -10
+  718  git show-ref --heads
+  719  git branch -all
+  720  git branch --all
+  721  git branch -d f4
+  722  git fsck --dangling -no-progress
+  723  git fsck --dangling --no-progress
+  724  git fsck --unreachable 
+  725  git merge-base main b2
+  726  git lg
+  727  git lg
+  728  ls
+  729  ls -altr > t.txt
+  730  ls
+  731  git st
+  732  git cma .
+  733  git st
+  734  git add .
+  735  git commit -m "Predposleden"
+  736  git lg
+  737  git log --oneline 
+  738  git status
+  739  git lg
+  740  ls -altr > r.txt
+  741  ls
+  742  git lg
+  743  git st
+  744  git push
+  745  git st
+  746  git pull
+  747  git st
+  748  git status 
+  749  cd ..
+  750  ls
+  751  cd demo/
+  752  ls
+  753  git st
+  754  ls -altr > y.txt
+  755  git st
+  756  git add .
+  757  git commit -m "Predposleden"
+  758  git st
+  759  git lg
+  760  ls -altr > u.txt
+  761  git add .
+  762  git commit -m "Posleden"
+  763  git lg
+  764  ls
+  765  git reset --hard HEAD~2
+  766  git lg
+  767  git reflog list 
+  768  git lg
+  769  git commit --amend -m "fixup! Adds files"
+  770  git lg
+  771  git st
+  772  git pull
+  773  git st
+  774  git lg
+  775  git lg
+  776  git st
+  777  git add .
+  778  git commit -m "New file"
+  779  git st
+  780  git lg
+  781  git push
+  782  git lg
+  783  git st
+  784  git lg
+  785  ls
+  786  ls > t.txt
+  787  git add .
+  788  git commit -m "NOv fajl t"
+  789  ls -altr > r.txt
+  790  git add .
+  791  git commit -m "NOv fajl r"
+  792  ls
+  793  git lg
+  794  git st
+  795  git commit --amend -m "fixing! Novi fajlovi t i r"
+  796  git st
+  797  git lg
+  798  git commit --amend -m "fixup! Novi fajlovi t i r"
+  799  git lg
+  800  git rebase -i main --autosquash 
+  801  git lg
+  802  ls > y.txt
+  803  git add .
+  804  git commit -m "NOv fajl u"
+  805  git lg
+  806  git rebase -i main --autosquash 
+  807  git rebase -i main
+  808  git rebase -i HEAD~3
+  809  git rebase --edit-todo
+  810  git rebase --continue
+  811  git lg
+  812  git st
+  813  cd ..
+  814  cd ..
+  815  mkdir demo5
+  816  cd demo5
+  817  history | grep bleam
+  818  history | grep bleam
+  819  history | grep blame
+  820  cd ..
+  821  cd demo
+  822  ls
+  823  history > 'GIT Commands History.txt'
